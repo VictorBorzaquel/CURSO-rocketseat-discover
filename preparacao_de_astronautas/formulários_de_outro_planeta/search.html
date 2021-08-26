@@ -1,0 +1,31 @@
+<datalist id="search-terms">
+  <option>Mac</option>
+  <option>Win</option>
+  <option>Linux</option>
+</datalist>
+
+<form>
+  <input type="search"
+    name="q" 
+    list="search-terms"
+    placeholder="Pesquisar"
+    aria-label="Pesquisar: Digite sua pesquisa"
+  >
+
+  <button type="submit">Pesquisar</button>
+</form>
+
+<br>
+
+<form>
+  <label>Pesquisar pelo ID</label>
+
+  <input type="search"
+    name="id"
+    size="5"
+    pattern="[0-9]{2}"
+    title="Digite o número do ID. Example: 09"
+  >
+
+  <button type="submit">Pesquisar</button>
+</form>
