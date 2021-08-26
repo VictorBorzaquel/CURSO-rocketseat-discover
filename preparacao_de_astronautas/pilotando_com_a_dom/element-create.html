@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Meu Sub-Titulo 3 (HTML)</h3>
+  <script>
+    const body = document.querySelector('body');
+
+    // Create element
+    const p = document.createElement('p');
+    p.innerText = 'Descrição... (Primeiro)';
+
+    const h1 = document.createElement('h1');
+    h1.innerText = 'Meu Titulo 1 (Segundo)';
+
+    const h2 = document.createElement('h2');
+    h2.innerText = 'Meu Titulo 2 (Terceiro)';
+
+    const p2 = document.createElement('p');
+    p2.innerText = 'Descrição... (Ultimo)';
+
+    // Adicionar no final
+    body.appendChild(p);
+
+    // Adicionar no inicio
+    body.prepend(h1);
+
+    // Adicionar antes de um elemento
+    const h3HTML = body.querySelector('h3');
+    body.insertBefore(h2, h3HTML);
+
+    // Adicionar depois de um elemento
+    const pHTML = body.querySelector('p');
+    body.insertBefore(p2, pHTML.nextSibling);
+  </script>
+</body>
+</html>

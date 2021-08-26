@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .active { color: green; }
+    .background { background-color: red; }
+  </style>
+</head>
+
+<body>
+  <h1>Meu Titulo</h1>
+
+  <script>
+    const element = document.querySelector('body');
+
+    /* Add - Remove */                                   console.group('Add - Remove');
+    element.classList.add('active', 'background');      console.log('Add: ', element.classList);
+    element.classList.remove('background');            console.log('Remove: ', element.classList);
+
+    /* Toggle */                                     console.groupEnd(); console.group('Toggle');
+    element.classList.toggle('new-class');           console.log('Toggle: ', element.classList);
+    element.classList.toggle('new-class');             console.log('Toggle: ', element.classList);
+    /* */                                               console.groupEnd();
+  </script>
+</body>
+
+</html>

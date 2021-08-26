@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>Meu Documento</h1>
+
+  <script>
+    /* */                                                 console.group('h1');
+    const title = document.querySelector('h1');       
+
+    title.setAttribute('id', 'title');
+    const titleID = document.querySelector('#title');     console.log('setAttribute:', titleID);
+    
+    const getAtribute = titleID.getAttribute('id');      console.log("getAtribute: ", getAtribute)
+
+    title.removeAttribute('id');                         console.log("removeAtribute: ", title)
+    /* */                                               console.groupEnd('h1');
+  </script>
+</body>
+
+</html>

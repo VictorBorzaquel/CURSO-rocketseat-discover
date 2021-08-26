@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input type="text">
+
+  <script>
+    const input = document.querySelector('input');
+
+    input.onkeydown = event => {
+      console.log('Event', event);
+      console.log('Event Key:',event.key);
+      console.log('Event Target:',event.currentTarget);
+      console.log('Event Target Value:',event.currentTarget.value);
+    }
+  </script>
+</body>
+</html>

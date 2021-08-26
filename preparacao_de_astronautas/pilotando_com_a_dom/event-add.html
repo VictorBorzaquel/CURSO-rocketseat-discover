@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Create console.log</h1>
+  <h2>Create console.log</h2>
+
+  <input type="text">
+
+  <script>
+    // Jeito 1 de fazer (executa apenas a ultima chamada)
+    const h1 = document.querySelector('h1');
+    h1.setAttribute('onclick', 'print(h1.innerText)');
+
+    h1.setAttribute('onclick', "print('Ultima Chamada!')");
+
+    function print(text) {
+      console.log(text);
+    }
+
+    // Jeito 2 de fazer (executa apenas a ultima chamada)
+    const inputText = document.querySelector('input[type="text"]');
+    inputText.onkeyup = () => {
+      console.log(inputText.value);
+    }
+
+    inputText.onkeyup = () => {console.log('Ultima Chamada!')};
+
+    // Jeito 3 de fazer (executa todas as ao mesmo tempo)
+    const h2 = document.querySelector('h2');
+    h2.addEventListener('click', print2);
+
+    function print2() {
+      console.log('Jeito 3');
+    }
+
+    h2.addEventListener('click', () => {console.log('Ultima Chamada!')});
+  </script>
+</body>
+</html>

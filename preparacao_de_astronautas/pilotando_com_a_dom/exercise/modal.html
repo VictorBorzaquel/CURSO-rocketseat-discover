@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Default */
+    * {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: none;
+    }
+    body {
+      background-color: #ebe3fd;
+    }
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    button {
+      background-color: #6013ce;
+      color: white;
+      border-radius: 5px;
+      padding: .7rem;
+      font-weight: bold;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+    /* Class */
+    .invisible {
+      display: none !important;
+    }
+    /* Modal */
+    .modal {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #606776;
+      height: 100vh;
+      width: 100vw;
+    }
+    .modalContent {
+      background-color: white;
+      padding: 3rem;
+      border-radius: 10px;
+      width: fit-content;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <button id="openModal">Abrir Janela</button>
+
+    <div class="modal invisible">
+      <div class="modalContent">
+        Tecle Delete para fechar
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const btnOpenModal = document.querySelector('#openModal');
+    const modal = document.querySelector('.modal');
+
+    btnOpenModal.onclick = () => {
+      modal.classList.remove('invisible');
+    }
+    
+    document.addEventListener('keydown', event => {
+      const keyIsDelete = event.key === 'Delete';
+
+      if (keyIsDelete) {
+        modal.classList.add('invisible');
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <header>
+    <h1>Meu Titulo.</h1>
+    <p>Description</p>
+  </header>
+
+  <script>
+    const header = document.querySelector('header');
+
+    /* Pega tudo o que tem dentro (Pode usar forEach) */   console.group('childNodes');
+    console.log(header.childNodes);
+
+    /* Elimina os espaços */                                console.groupEnd('childNodes'); console.group('children');
+    console.log(header.children);
+
+    /* First Child */                                      console.groupEnd('children'); console.group('First Child');
+    console.log('All:', header.firstChild);
+    console.log('Element:', header.firstElementChild);
+
+    /* Last Child */                                       console.groupEnd('First Child'); console.group('Last Child');
+    console.log('All:', header.lastChild);
+    console.log('Element:', header.lastElementChild);
+    /* */                                                  console.groupEnd('Last Child');
+  </script>
+</body>
+
+</html>

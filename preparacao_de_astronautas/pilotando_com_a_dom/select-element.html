@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <h1 id="title">Meu Documento</h1>
+
+  <p class="paragraph">Esse é um paragrafo.</p>
+  <p class="paragraph">Esse é outro paragrafo.</p>
+
+  <script>
+    /* Get Element */                                                /**/console.group('Get Element By');
+    const title = document.getElementById('title');                    /**/console.log("getElementById:", title);
+    const paragraphs = document.getElementsByClassName('paragraph');     /**/console.log("getElementsByClassName:", paragraphs);
+    const metasTag = document.getElementsByTagName('meta');             /**/console.log("getElementsByTagName:", metasTag);
+
+    /* Query Selector */                                               /**/console.groupEnd('Get Element'); console.group('Query Selector');
+    const querySelector = document.querySelector('#title');             /**/console.log("querySelector:", querySelector)
+    const querySelectorAll = document.querySelectorAll('[src]');       /**/console.log("querySelectorAll:", querySelectorAll)
+
+    const metas = document.querySelectorAll('meta');
+      /* Query Selector: forEach */                                       /**/console.group('forEach');
+      metas.forEach(e => console.log(e));
+
+    /* Qual Usar? */                                                                /**/console.groupEnd('forEach'); console.groupEnd('Query Selector');
+    /* 
+      /Mais rápido e mais legível /
+
+      getElementById (output = element)
+      getElementsByClassName (output = HTMLCollection)
+      getElementsByTagName (output = HTMLCollection)
+
+      /Mais versátil e pode usar forEach/
+
+      querySelector (output = element)
+      querySelectorAll (output = NodeList) (can use forEach)
+    */                                                                
+
+  </script>
+</body>
+
+</html>
