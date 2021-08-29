@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Template */
+    .body-template {
+      margin: 0; 
+      padding: 0;
+      height: 100vh;
+      box-sizing: border-box;
+      background-color: white;
+      color: black;
+      font: bold 24px sans-serif;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header { background: rgb(240, 205, 176); }
+    .main { background: rgb(219, 219, 219); }
+    .aside { background: rgb(172, 131, 240); }
+    .footer { background: rgb(123, 202, 107); }
+
+    /* Grid */
+    body {
+      display: grid;
+      grid-template-areas: 
+      "header header"
+      "main aside"
+      "footer footer";
+      grid-template-rows: 100px 1fr 120px;
+      grid-template-columns: 1fr 200px;
+    }
+    @media (max-width: 600px) {
+      body {
+      grid-template-areas: 
+      "header"
+      "main"
+      "aside"
+      "footer";
+      grid-template-rows: 100px 1fr 200px 120px;
+      grid-template-columns: 1fr;
+    }
+    }
+    header {
+      grid-area: header;
+    }
+    main {
+      grid-area: main;
+    }
+    aside {
+      grid-area: aside;
+    }
+    footer {
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body class="body-template">
+  <header class="header content">Topo</header>
+  <main class="main content">Conteúdo</main>
+  <aside class="aside content">Infos adicionais</aside>
+  <footer class="footer content">Rodapé</footer>
+</body>
+</html>

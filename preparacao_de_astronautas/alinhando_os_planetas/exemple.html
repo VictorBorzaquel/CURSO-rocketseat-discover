@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .page {
+      display: flex;
+      height: 100vh;
+      
+    }
+    aside {
+      background: rgb(162, 250, 144);
+      flex: 1;
+    }
+    main {
+      background: rgb(126, 229, 255);
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+    }
+    section:nth-child(1) {
+      background: rgb(253, 231, 158);
+      flex: 2;
+    }
+    section:nth-child(2) {
+      background: rgb(240, 154, 147);
+      flex: 0 100px;
+    }
+    section:nth-child(3) {
+      background: rgb(253, 158, 229);
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside>Aside</aside>
+    <main>
+      Main
+      <section>Content 1</section>
+      <section>Content 2</section>
+      <section>Content 3</section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 50px;
+}
+.flex-container {
+  display: flex;
+  height: 300px;
+  border: 10px dotted red;
+}
+.flex-item {
+  background: grey;
+  border: 2px solid black;
+}
+/* 1 */
+.flex-container:nth-child(1) .flex-item {
+  flex: 1;
+}
+.flex-container:nth-child(1) .flex-item:first-child {
+  order: 1;
+}
+/* 2 */
+.flex-container:nth-child(2) {
+  flex-direction: column-reverse;
+}
+/* 3 */
+.flex-container:nth-child(3) {
+  flex-wrap: wrap;
+}
+.flex-container:nth-child(3) .flex-item {
+  width: 200px;
+}
+/* 4 */
+.flex-container:nth-child(4) {
+  flex-flow: column wrap;
+}
+/* 5 */
+.flex-container:nth-child(5) {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+/* 6 */
+.flex-container:nth-child(6) {
+  gap: 2rem;
+}
+/* 7 */
+.flex-container:nth-child(7) {
+  /* flex-direction: column; */
+}
+.flex-container:nth-child(7) .flex-item {
+  flex-basis: 100px; /* Relativo entre width e height de acordo com flex direction */
+}
+/* 8 */
+.flex-container:nth-child(8) .flex-item:nth-child(1) {
+  flex-grow: 2;
+}
+.flex-container:nth-child(8) .flex-item:nth-child(2),
+.flex-container:nth-child(8) .flex-item:nth-child(3) {
+  flex-grow: 1;
+}
+/* 9 */
+.flex-container:nth-child(9) .flex-item {
+  flex-basis: 100%;
+}
+.flex-container:nth-child(9) .flex-item:nth-child(2),
+.flex-container:nth-child(9) .flex-item:nth-child(3) {
+  flex-shrink: 2;
+}
+/* 10 */
+.flex-container:nth-child(10) .flex-item {
+  /* flex: grow, shrink, basis */
+  flex: 0 1 150px;
+}

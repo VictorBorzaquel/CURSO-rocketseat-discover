@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0;
+    }
+    body { 
+      background-color: white; 
+      margin: 0; 
+      padding: 0; 
+      font-size: 30px;
+      color: green;
+    }
+    article {
+      border: 1px solid black;
+      height: 300px;
+      border: 10px dashed red;
+      background-color: rgb(163, 240, 240);
+      background-image: url(./next-logo.png);
+    }
+    /* Background */
+    article:nth-child(1) {
+    }
+    article:nth-child(2) {
+      background-repeat: repeat-y;
+      background-position: center top;
+    }
+    article:nth-child(3) {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    article:nth-child(4) {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    article:nth-child(5) {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70% 50%;
+    }
+    article:nth-child(6) {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-origin: border-box;
+    }
+    article:nth-child(7) {
+      padding: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-origin: border-box; /* padding-box */
+      background-clip: content-box;
+    }
+    article:nth-child(8) {
+      background-attachment: fixed;
+    }
+    article:nth-child(9) {
+      background: linear-gradient(45deg, red, yellow, blue);
+    }
+    article:nth-child(10) {
+      background: radial-gradient(red, yellow, blue);
+    }
+    article:nth-child(11) {
+      padding: 30px;
+      /* Color, image, repeat, (position / size), (origin, clip), attachment */
+      /* Pode colocar mais de um background */
+      background: rgb(163, 240, 163) url(./next-logo.png) no-repeat left bottom / 200px border-box content-box fixed;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article>
+      <h1>Titulo página</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio ab</p>
+    </article>
+    <article></article>
+    <article></article>
+    <article></article>
+  </main>
+</body>
+</html>

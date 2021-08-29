@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { background-color: white; margin: 0; padding: 0}
+    main { 
+      margin: 50px; 
+      background-color: rgb(165, 187, 212);
+      /* position: relative; */
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+    .red { 
+      background-color: red; 
+      position: relative;
+      left: 150px;
+      top: 80px;
+    }
+    .green { 
+      background-color: green; 
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    .blue { 
+      background-color: blue; 
+      position: fixed;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="red box"></div>
+    <div class="green box"></div>
+    <div class="blue box"></div>
+  </main>
+  
+</body>
+</html>
